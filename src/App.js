@@ -1,13 +1,16 @@
 import React from "react";
 import Escena from "./components/escena/Escena";
-import Stories from "./Stories";
+import Stories from "./components/escena/Stories";
+import Box from "./components/escena/Styled";
 
 function App() {
 
   const Story = Stories.map(param => {
     return(
-      <Escena param={param}
-      />
+        <Box>
+          <Escena param={param}
+          /> 
+        </Box>
     )
   })
   return (
