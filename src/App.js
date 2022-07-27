@@ -1,10 +1,19 @@
 import React from "react";
-import PrintPhrase from "./components/escena/Escena";
+import Escena from "./components/escena/Escena";
+import Stories from "./Stories";
 
-function App(){
+function App() {
 
-  return(
-    <PrintPhrase/>
+  const Story = Stories.map(param => {
+    return(
+      <Escena param={param}
+      />
+    )
+  })
+  return (
+    <div>
+      {Story}
+    </div>
  );
 }
 export default App;
